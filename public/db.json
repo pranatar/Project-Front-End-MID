@@ -1,0 +1,17 @@
+{
+  "profile": {
+    "name": "Pranata Vareliano Rumagit",
+    "profession": "Mahasiswa & Calon Ahli Network",
+    "bio": "Saya adalah mahasiswa yang tertarik pada teknologi jaringan, AI, dan perakitan mesin elektronik. Saya suka olahraga dan sangat suka dengan mencoba hal baru.",
+    "birthplace": "Tonsewer, Tompaso, Minahasa",
+    "birthdate": "2006-02-26",
+    "skills": ["Teknik Mesin", "Analisis", "Git", "AI"],
+    "github": "https://github.com/pranatar",
+    "linkedin": "https://www.linkedin.com/in/pranata-rumagit",
+    "contact": "085756479594",
+    "photo": "/profil.jpeg",
+    "education": ["sd", "SD Inpress Tonsewer","smp", "SMP Negeri 2 Tompaso","sma", "SMA Negeri 2 Tompaso"]
+    
+    
+  }
+}
