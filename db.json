@@ -1,0 +1,34 @@
+{
+  "profile": {
+    "name": "Pranata Vareliano Rumagit",
+    "profession": "Mahasiswa & Calon Ahli Network",
+    "bio": "Saya adalah mahasiswa yang tertarik pada teknologi jaringan, AI, dan perakitan mesin elektronik. Saya suka olahraga dan sangat suka dengan mencoba hal baru.",
+    "about": "Saya punya pengalaman ketika saya ingin mencapai sesuatu disaat saya dalam lingkungan yang tidak bisa saling support dan karna saya juga takut kehilangan teman yang akhirnya saya tidak bisa mencapai tujuan saya dan hanya bisa mengikuti arus pergaulan. Tapi ketika saya sudah mulai mencari tempat dimana saya bisa berkembang dan di lingkungan yang tidak toxic sehingga bisa mencapai tujuan saya. Itu adalah salah satu pengalaman saya.",
+    "birthplace": "Indonesia, Sulawesi Utara, Minahasa, Tompaso, Tonsewer",
+    "birthdate": "26 Februari 2006",
+    "bg_photo": "/bg_poto.png",
+    
+
+    "skills": ["Git", "CSS", "Java", "Python", "Tailwind", "Vite"],
+    
+    "github": "https://github.com/pranatar",
+    "linkedin": "https://www.linkedin.com/feed/?trk=404_page",
+    "contact": "085756479594",
+    "photo": "/poto profil.jpeg",
+    "education": [
+      {"level": "SD", "school": "SD Inpres Tonsewer--2011-2017"},
+      {"level": "SMP", "school": "SMP Negeri 2 Tompaso--2017-2020"},
+      {"level": "SMA", "school": "SMA Negeri 2 Tompaso--2020-2023"},
+      {"level": "Kuliah", "school": "Universitas Klabat--2023-Sekarang"}
+    ],
+    "icons": {
+      "css": "/css.png",
+      "git": "/git.png",
+      "github": "/github.png",
+      "java": "/java.png",
+      "python": "/python.png",
+      "tailwind": "/tailwind.png",
+      "vite": "/vite.png"
+    }
+  }
+}
