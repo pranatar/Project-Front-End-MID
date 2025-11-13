@@ -1,22 +1,58 @@
-// components/ModalPhoto.jsx
-export default function ModalPhoto({ photo, toggleZoom }) {
-  return (
-    <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
-      onClick={toggleZoom}
-    >
-      <img
-        src={photo || "/poto profil.jpeg"}
-        alt="Foto Profil Diperbesar"
-        className="max-w-[90vw] max-h-[90vh] rounded-xl shadow-2xl border-4 border-blue-400 object-contain cursor-pointer transition-all duration-500 transform scale-100 hover:scale-[1.02]"
-        onClick={(e) => e.stopPropagation()}
-      />
-      <button
-        onClick={toggleZoom}
-        className="absolute top-4 right-4 text-white text-3xl p-2 bg-black/50 rounded-full hover:bg-black/70 transition"
-      >
-        &times;
-      </button>
-    </div>
-  );
-}
+import React from 'react';
+import InfoAccordion from './InfoAccordion';
+import SkillsAccordion from './SkillsAccordion';
+import EducationAccordion from './EducationAccordion';
+
+const DETAIL_IDS = {
+    INFO: 'info',
+    SKILLS: 'skills',
+    EDU: 'education'
+};
+
+const DetailSection = ({ 
+    data, 
+    openDetail, 
+    toggleDetail, 
+    toggleDetailView 
+}) => {
+    return (
+        <div id="detail-section" className="w-full max-w-2xl p-8 my-10 flex flex-col items-center grow">
+            <h3 className="text-4xl font-bold mb-8 text-center text-white-400">
+                Detail Profil
+            </h3>
+
+            {/* Hapus bg-gray-800 dari sini agar background tidak menutupi gambar di elemen ini */}
+            <div className="p-8 rounded-2xl shadow-xl w-full border border-gray-700 space-y-4 backdrop-blur-sm bg-gray-800/80">
+                <InfoAccordion 
+                    data={data}
+                    isOpen={openDetail === DETAIL_IDS.INFO}
+                    onToggle={() => toggleDetail(DETAIL_IDS.INFO)}
+                    isVisible={!!(data.birthplace || data.birthdate || data.about)}
+                />
+
+                <SkillsAccordion 
+                    data={data}
+                    isOpen={openDetail === DETAIL_IDS.SKILLS}
+                    onToggle={() => toggleDetail(DETAIL_IDS.SKILLS)}
+                    isVisible={!!data.skills?.length}
+                />
+
+                <EducationAccordion 
+                    data={data}
+                    isOpen={openDetail === DETAIL_IDS.EDU}
+                    onToggle={() => toggleDetail(DETAIL_IDS.EDU)}
+                    isVisible={!!data.education?.length}
+                />
+
+                <button
+                    onClick={toggleDetailView}
+                    className="w-full mt-6 bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105"
+                >
+                    Tutupi Detail dan Kembali ke Profil
+                </button>
+            </div>
+        </div>
+    );
+};
+
+export default DetailSection;
